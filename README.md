@@ -104,21 +104,6 @@ Here, `-g 0` selects GPU index 0. Both configurations use **100 training epochs*
 
 Checkpoints are saved under `checkpoints/SALCDGNet/` in dataset-specific subdirectories, subject to the naming conventions used by BasicTS.
 
-## Evaluation
-
-After training, locate the checkpoint saved by BasicTS and supply its actual path:
-
-```bash
-python experiments/evaluate.py -cfg configs/PEMS04.py -ckpt "path/to/your_checkpoint.pt" -g 0 -d gpu
-```
-
-```bash
-python experiments/evaluate.py -cfg configs/PEMS08.py -ckpt "path/to/your_checkpoint.pt" -g 0 -d gpu
-```
-
-Replace `path/to/your_checkpoint.pt` with a real checkpoint file. The configurations report **MAE**, **RMSE**, and **MAPE**, with MAE as the primary metric. The configured evaluation horizons are **1–12** for PEMS04 and **3, 6, 12** for PEMS08.
-
-**Reproducibility note:** This release contains the full-model configurations set to 100 epochs. Results may differ from previous runs that used a different number of epochs or different graph supports; use the released configuration settings when reporting reproduced metrics.
 
 ## Citation
 
@@ -128,8 +113,3 @@ If you use this implementation in your research, please cite the paper:
 
 The full publication details and BibTeX entry will be added when available.
 
-## Acknowledgements
-
-This project builds on the [BasicTS](https://github.com/GestaltCogTeam/BasicTS) forecasting framework (version 0.5.8). Parts of the temporal-convolution and graph-propagation implementation were adapted from its [Graph WaveNet baseline](https://github.com/GestaltCogTeam/BasicTS/tree/v0.5.8/baselines/GWNet). We thank the original developers for making their work available.
-
-See the included `LICENSE` and applicable upstream copyright and license notices for redistribution terms.
