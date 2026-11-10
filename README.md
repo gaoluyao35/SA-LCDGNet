@@ -2,7 +2,7 @@
 
 **State-Aware Lag-Conditioned Dynamic Graph Network for Traffic Flow Forecasting**
 
-This repository provides the implementation of **SA-LCDGNet** for short-term traffic flow forecasting. The implementation is built on **[BasicTS v0.5.8](https://github.com/GestaltCogTeam/BasicTS/tree/v0.5.8)** and includes the **full model (without ablation switches)**.
+This repository provides the implementation of **SA-LCDGNet** for short-term traffic flow forecasting. The implementation is built on **[BasicTS v0.5.8](https://github.com/GestaltCogTeam/BasicTS/tree/v0.5.8)** and includes the **full model**.
 
 **Current release:** training and evaluation configurations are provided for **PEMS04** and **PEMS08**. Although the paper also evaluates PEMS03 and PEMS07, their configurations are not included in this release.
 
